@@ -6,7 +6,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
   <title>Frontend Mentor | Contact form</title>
+
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,34 +21,78 @@
   </style>
 </head>
 <body>
+  <section class="form_container">
 
-  Contact Us
+    
+    
+    <form class="form">
 
-  First Name
-  This field is required
+      <h1 class="form_title">Contact Us</h1>
 
-  Last Name
-  This field is required
+      <div class="form_inputs_fl_container">
+          <div class="form_input_label">
+            <label for="first_name">First Name <span class="asterisk">*</span></label>
+            <input type="text" id="first_name" name="first_name" required>
+            <span class="error_message">This field is required</span>
+          </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+          <div class="form_input_label">
+            <label for="last_name">Last Name <span class="asterisk">*</span></label>
+            <input type="text" id="last_name" name="last_name" required>
+            <span class="error_message">This field is required</span>
+          </div>
+      </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <div class="form_input_S_container">
+        <div class="form_input_label">
+          <label for="email">Email Address <span class="asterisk">*</span></label>
+          <input type="email" id="email" name="email" required>
+          <span class="error_message">Please enter a valid email address</span>
+      </div>
 
-  Message
-  This field is required
+      <div class="form_input_fl_container">
+        <div class="query_type_container">
+          <label for="query_type">Query Type <span class="asterisk">*</span></label>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+          <div class="query_type_options">
+            <input type="radio" id="query_type" name="query_type" value="0">
+            <label for="query_type">General Enquiry</label>
+          </div>
 
-  Submit
+          <div class="query_type_options">
+            <input type="radio" id="query_type" name="query_type" value="1">
+            <label for="query_type">Support Enquiry</label>
+          </div>
+          
+          <span class="error_message">Please select a query type</span>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+        </div>
+      </div>
+
+      <div class="form_input_label_message">
+        <label for="message">Message <span class="asterisk">*</span></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <span class="error_message">This field is required</span>
+      </div>
+
+      <div class="consent_container">
+        <label for="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          I consent to being contacted by the team <span class="asterisk">*</span>
+        </label>
+        <span class="error_message">To submit this form, please consent to being contacted</span>
+      </div>
+
+      <button class="submit_button" type="submit">Submit</button>
+
+    </form>
+
+    <div class="success_message" style="display: none;">
+      <h2>Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
