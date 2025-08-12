@@ -32,13 +32,13 @@
       <div class="form_inputs_fl_container">
           <div class="form_input_label">
             <label for="first_name">First Name <span class="asterisk">*</span></label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" id="first_name" name="first_name" >
             <span class="error_message">This field is required</span>
           </div>
 
           <div class="form_input_label">
             <label for="last_name">Last Name <span class="asterisk">*</span></label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input type="text" id="last_name" name="last_name" >
             <span class="error_message">This field is required</span>
           </div>
       </div>
@@ -46,49 +46,64 @@
       <div class="form_input_S_container">
         <div class="form_input_label">
           <label for="email">Email Address <span class="asterisk">*</span></label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" >
           <span class="error_message">Please enter a valid email address</span>
+        </div>
       </div>
 
       <div class="form_input_fl_container">
-        <div class="query_type_container">
-          <label for="query_type">Query Type <span class="asterisk">*</span></label>
 
-          <div class="query_type_options">
-            <input type="radio" id="query_type" name="query_type" value="0">
-            <label for="query_type">General Enquiry</label>
-          </div>
-
-          <div class="query_type_options">
-            <input type="radio" id="query_type" name="query_type" value="1">
-            <label for="query_type">Support Enquiry</label>
-          </div>
-          
-          <span class="error_message">Please select a query type</span>
-
+        <div class="form_query_type_title">
+          <p>Query Type <span class="asterisk">*</span></p>
         </div>
+        
+        <div class="query_type_container">
+
+          <div class="query_type_options">
+            <input type="radio" id="query_type_0" name="query_type" value="0" >
+            <label for="query_type_0">General Enquiry</label>
+          </div>
+
+          <div class="query_type_options">
+            <input type="radio" id="query_type_1" name="query_type" value="1" >
+            <label for="query_type_1">Support Enquiry</label>
+          </div>
+        </div>
+
+          <span class="error_message" id="span_error_radio">Please select a query type</span>
+
+        
       </div>
 
       <div class="form_input_label_message">
         <label for="message">Message <span class="asterisk">*</span></label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="3" ></textarea>
         <span class="error_message">This field is required</span>
       </div>
 
-      <div class="consent_container">
-        <label for="consent">
-          <input type="checkbox" id="consent" name="consent" required>
-          I consent to being contacted by the team <span class="asterisk">*</span>
-        </label>
-        <span class="error_message">To submit this form, please consent to being contacted</span>
+      <div class="form_input_label">
+        <div class="consent_container">
+          <input type="checkbox" id="consent" name="consent" >
+          <label for="consent">
+            I consent to being contacted by the team <span class="asterisk">*</span>
+          </label>
+        </div>
+        <div> 
+          <span class="error_message">To submit this form, please consent to being contacted</span>
+        </div>
+        
+       
       </div>
 
-      <button class="submit_button" type="submit">Submit</button>
+      <button id="submit_button" class="submit_button" type="submit">Submit</button>
 
     </form>
 
-    <div class="success_message" style="display: none;">
-      <h2>Message Sent!</h2>
+    <div class="success_message">
+      <div class="success_icon_title">
+        <img src="./assets/images/icon-success-check.svg" alt="Success Icon">
+        <h4>Message Sent!</h4>
+      </div>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
   
@@ -98,5 +113,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="dinamicaForm.js"></script>
 </body>
 </html>
